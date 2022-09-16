@@ -36,10 +36,41 @@ el numero total de numeros negativos es ${negativo},el numero total de numeros p
 ${producto}`);*/
 
 
-let horas = parseInt(prompt("dime el numemro de horas")), precio =  parseFloat(prompt("dime el precio de las horas")),salario=0;
-if(horas>40){
-    salario=precio*40+((horas-40)*(precio*1.5));
+// let horas = parseInt(prompt("dime el numemro de horas")), precio =  parseFloat(prompt("dime el precio de las horas")),salario=0;
+// if(horas>40){
+//     salario=precio*40+((horas-40)*(precio*1.5));
+// } else {
+//     salario=precio*horas;
+// }
+// console.log(salario);
+
+// let n1 = parseInt(prompt("dime un numero")),n2 = parseInt(prompt("dime un numero"));
+// if(n1%2!==0 && n2%2!==0){
+//     if(n1>n2){
+//         for (let i = n2; i <= n1; i++) {
+//             if(i%2===0){
+//                 document.write(i+" ");
+//             }
+//         }
+//     } else if(n2>n1){
+//         for (let i = n1; i <= n2; i++) {
+//             if(i%2===0){
+//                 document.write(i+" ");
+//             }
+//         }
+//     } else {
+//         document.write("los numeros no pueden ser iguales");
+//     }
+// } else {
+//     document.write("uno o los dos numeros son pares");
+// }
+
+let n1 = parseInt(prompt("dime un numero")),n2 = parseInt(prompt("dime la potencia")), potencia=1;
+if(isNaN(parseInt(n1))||isNaN(parseInt(n2))||n1<=0||n2<=0){
+    document.write("hay que introducir numeros positivos");
 } else {
-    salario=precio*horas;
+    for (let i = 1; i <= n2; i++) {
+        potencia*=n1;
+    }
+    document.write(potencia);
 }
-console.log(salario);
